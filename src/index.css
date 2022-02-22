@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #ffca91;
+  background-color: #EBF0FB;
   margin: 0;
   padding: 10px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -29,13 +29,15 @@ main {
 
 h1 {
   color: #636368;
-  font-size: 34px;
+  font-size: 36px;
   font-weight: 400;
-  margin: 10px;
+  color: #E77700;
+  /* margin: 10px; */
 }
 
 input {
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
+  background-color: #F0F7FE;
   padding: 15px;
   border-radius: 10px 0 0 10px;
   font-size: 18px;
@@ -46,7 +48,11 @@ input {
   /* border: none; */
 }
 
-.addBtn {
+::placeholder {
+  color: #aaa;
+}
+
+.add {
   padding: 16px 22px;
   font-size: 18px;
   cursor: pointer;
@@ -58,8 +64,14 @@ input {
   border-color: #aaa;
   /* border-style: solid; */
   position: relative;
+  background-color: #F09A4D;
+  color: #F09A4D;
+  transition: all 0.3s ease;
+}
+.add:hover{
   background-color: #E77700;
   color: #E77700;
+  transition: all 0.3s ease;
 }
 
 .bi-plus-circle {
@@ -95,8 +107,9 @@ ul {
 
 .item {
   display: flex;
+  gap: 10px;
   align-items: center;
-  gap: 12px;
+
 }
 
 li {
@@ -109,21 +122,23 @@ li {
   padding: 0 12px;
   border-bottom: 1px solid #c5c5c5;
   margin: 1px 0;
+  color: #EC6B5D;
 }
 
 li:hover {
-  background-color: #f1f1f1;
+  background-color: #F0F7FE;
 }
 
 li .bi {
   font-size: 22px;
   padding: 15px 0;
   cursor: pointer;
+  color: #161616;
 }
 
 li .ok {
   text-decoration: line-through;
-  color: #999;
+  color: #aaa;
 }
 
 li .title {
@@ -137,7 +152,11 @@ li .date {
   font-size: 14px;
 }
 
-button {
+li .bi-x-lg:hover {
+  color: #EC6B5D;
+}
+
+.clear {
   padding: 10px 15px;
   font-size: 18px;
   border-radius: 10px;
@@ -145,8 +164,11 @@ button {
   border: 1px solid #fff;
   background-color: #ffffff;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-button:hover{
-  border: 1px solid #aaa;
+.clear:hover {
+  border: 1px solid #EC6B5D;
+  color: #EC6B5D;
+  transition: all 0.3s ease;
 }

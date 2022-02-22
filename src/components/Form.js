@@ -19,7 +19,7 @@ export default function Form(props) {
             <input type="text" name="" id="" placeholder="Listeye Ekle"
                 onChange={(e) => setBaslik(e.target.value)}
                 value={baslik} />
-            <button className="addBtn"><i className="bi bi-plus-circle"> </i>#</button>
+            <button className="add"><i className="bi bi-plus-circle"> </i>#</button>
 
         </form>
     )

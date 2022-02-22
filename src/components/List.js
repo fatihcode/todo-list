@@ -11,11 +11,11 @@ export default function List(props) {
                return (
                   <li key={i}>
                      <div className="item">
-                        <span className={item.ok ? "bi bi-check2-circle" : "bi bi-circle"} onClick={() => props.listOk(item.id)}></span>
+                        <i className={item.ok ? "bi bi-check2-circle" : "bi bi-circle"} onClick={() => props.listOk(item.id)}></i>
                         <span className={item.ok ? "ok title" : "title"}>{item.baslik}</span>
-                        <span className="date">{item.dat}</span>
                      </div>
-                     <div>
+                     <div className="item">
+                        <span className="date">{item.dat}</span>
                         <i className="bi bi-x-lg" onClick={() => props.listRemove(item.id)}></i>
                      </div>
                   </li>
@@ -24,7 +24,7 @@ export default function List(props) {
 
          </ul>
 
-         <button onClick={props.listClear}><i class="bi bi-clipboard-x"> </i>Tamamlananları Temizle</button>
+         <button className="clear" onClick={props.listClear}><i class="bi bi-clipboard-x"> </i>Tamamlananları Temizle</button>
 
       </div>
    )
