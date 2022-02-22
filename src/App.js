@@ -4,13 +4,12 @@ import List from './components/List'
 
 
 const initalState = [
-   { id: 1, baslik: "Alışveriş Yapılacak", dat: "22.01.2021", ok: false },
-   { id: 2, baslik: "Fatura Ödenecek", dat: "23.01.2021", ok: true },
-   { id: 3, baslik: "Araba Yıkancak", dat: "23.01.2022", ok: false },
-   { id: 4, baslik: "Proje Hazırlanacak", dat: "23.01.2022", ok: true },
-   { id: 5, baslik: "Okula Uğra", dat: "19.02.2022", ok: false },
-   { id: 6, baslik: "Markete Uğra", dat: "20.02.2022", ok: false },
-   { id: 7, baslik: "Bankaya Uğra", dat: "21.02.2022", ok: false }
+   { id: 1, baslik: "Markete Uğra", dat: "19.01.2022", ok: false },
+   { id: 2, baslik: "Faturaları Öde", dat: "20.01.2022", ok: true },
+   { id: 3, baslik: "E-postalara göz at", dat: "21.01.2022", ok: false },
+   { id: 4, baslik: "Proje Hazırla", dat: "23.01.2022", ok: true },
+   { id: 5, baslik: "Konu Tekrarı Yap", dat: "19.02.2022", ok: false },
+   { id: 6, baslik: "Bankaya Uğra", dat: "20.02.2022", ok: false }
 ]
 
 export default function App() {
