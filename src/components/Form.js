@@ -16,7 +16,7 @@ export default function Form(props) {
     return (
         <form onSubmit={formAdd}>
 
-            <input type="text" name="" id="" placeholder="Listeye Ekle"
+            <input type="text" name="" id="" placeholder="Listeye ekle..."
                 onChange={(e) => setBaslik(e.target.value)}
                 value={baslik} />
             <button className="add"><i className="bi bi-plus-circle"> </i>#</button>

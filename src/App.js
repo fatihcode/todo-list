@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Form from './components/Form'
 import List from './components/List'
 
-
-const initalState = [
+const defaultList = [
    { id: 1, baslik: "Markete Uğra", dat: "19.01.2022", ok: false },
    { id: 2, baslik: "Faturaları Öde", dat: "20.01.2022", ok: true },
    { id: 3, baslik: "E-postalara göz at", dat: "21.01.2022", ok: false },
@@ -14,23 +13,23 @@ const initalState = [
 
 export default function App() {
 
-   const [liste, setListe] = useState(initalState)
+   const [liste, setListe] = useState(defaultList)
 
-   const listAdd = (item) => {
-      setListe([...liste, { id: Date.now(), baslik: item, dat: new Date().toLocaleDateString(), ok: false }])
-   }
+   const [tasks, setTasks] = useState()
 
-   const listOk = (id) => {
-      setListe(liste.map(item => item.id == id ? { ...item, ok: !item.ok } : item))
-   }
+   const listAdd = (item) => setListe([...liste, { id: Date.now(), baslik: item, dat: new Date().toLocaleDateString(), ok: false }])
 
-   const listClear = () => {
-      setListe(liste.filter(item => !item.ok))
-   }
+   const listOk = (id) => setListe(liste.map(item => item.id == id ? { ...item, ok: !item.ok } : item))
 
-   const listRemove = (id) => {
-      setListe(liste.filter(item => item.id !== id))
-   }
+   const listClear = () => setListe(liste.filter(item => !item.ok))
+
+   const listRemove = (id) => setListe(liste.filter(item => item.id !== id))
+
+   useEffect(() => {
+      let num = 0
+      liste.map(item => item.ok ? ++num : null)
+      setTasks(num)
+   })
 
    return (
       <main>
@@ -39,6 +38,13 @@ export default function App() {
 
          <Form listAdd={listAdd} />
          <List list={liste} listOk={listOk} listClear={listClear} listRemove={listRemove} />
+         <div className="screen">
+            <span className="tasks">
+               <span className="bi bi-check2-circle"> {tasks}</span>
+               <span className="bi bi-circle"> {liste.length - tasks}</span>
+            </span>
+            <button className="clear" onClick={listClear}><i className="bi bi-clipboard-x"> </i>Bitenleri Sil</button>
+         </div>
 
       </main>
    )

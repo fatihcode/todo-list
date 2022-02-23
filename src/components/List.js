@@ -24,8 +24,6 @@ export default function List(props) {
 
          </ul>
 
-         <button className="clear" onClick={props.listClear}><i class="bi bi-clipboard-x"> </i>Tamamlananları Temizle</button>
-
       </div>
    )
 }
