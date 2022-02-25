@@ -31,7 +31,7 @@ export default function Form(props) {
                 <input type="text" name="" id="" placeholder="Listeye ekle..."
                     onChange={(e) => setBaslik(e.target.value)} value={baslik} />
             </div>
-            <button className="add"><i className="bi bi-plus-circle"></i></button>
+            <button className="add"><i className="bi bi-plus-circle"> </i>#</button>
 
         </form>
     )

@@ -49,11 +49,11 @@ h1 {
 #inputClean {
   display: none;
   position: absolute;
-  padding: 10px;
-  right: 0px;
+  right: 5px;
   font-size: 22px;
   cursor: pointer;
   color: #aaa;
+  padding: 10px;
 }
 
 input {
@@ -73,9 +73,9 @@ input {
   cursor: pointer;
   position: relative;
   background-color: #EA6800;
-  font-size: 25px;
-  color: #fff;
-  padding: 10px 15px;
+  font-size: 18px;
+  color: #EA6800;
+  padding: 15px 22px;
   border: none;
   border-radius: 0 10px 10px 0;
   transition: all 0.2s ease;
@@ -86,7 +86,14 @@ input {
 
 .add:hover {
   background-color: #ff8706;
+  color: #ff8706;
   transition: all 0.2s ease;
+}
+
+.bi-plus-circle {
+  position: absolute;
+  color: #ffffff;
+  font-size: 25px;
 }
 
 .liste {
@@ -186,7 +193,7 @@ li .bi-x-lg:hover {
   font-size: 16px;
   border-radius: 10px;
   border: 1px solid #fff;
-  background-color: #fff;
+  background-color: #ffffff;
   transition: all 0.3s ease;
 }
 
